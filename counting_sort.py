@@ -24,9 +24,9 @@ def counting_sort(arr):
 
     while i >= 0:
 
-        # basically first we get the element we need to place with arr[i]
-        # then we check it count with c[arr[i]-1] , -1 for decrement from position value to index value
-        # then we assign the value "arr[i]" to the index value we derived in res
+        # first we get the element we need to place with arr[i]
+        # check it's count with c[arr[i]-1] (-1 for decrement from position value to index value)
+        # assign the value "arr[i]" to the index value we derived in res
 
         res[c[arr[i]]-1] = arr[i]
 
@@ -38,5 +38,8 @@ def counting_sort(arr):
 
 
 if __name__ == "__main__":
+
+    # Note : The range of numbers this program accepts is only 0-9
+
     arr = list(map(int, input("Enter a list of integers to be sorted : ").split()))
     print(counting_sort(arr))
