@@ -37,4 +37,6 @@ def counting_sort(arr):
     return res
 
 
-print(counting_sort([2, 1, 2, 6, 0, 4, 3, 3]))
+if __name__ == "__main__":
+    arr = list(map(int, input("Enter a list of integers to be sorted : ").split()))
+    print(counting_sort(arr))
