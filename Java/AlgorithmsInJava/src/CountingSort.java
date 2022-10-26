@@ -11,8 +11,8 @@ public class CountingSort {
     public static int[] countingSort(int[] arr){
         int[] count = new int[10];
 
-        for(int i = 0 ; i<arr.length ; i++){
-            count[arr[i]] += 1;
+        for (int j : arr) {
+            count[j] += 1;
         }
         
         for(int i = 1 ; i<10 ; i++){
