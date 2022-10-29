@@ -4,10 +4,11 @@ This repository contains the following algorithms implemented in Python.
 
 ## Sorting Algorithms
 
-- Counting Sort
-- Merge Sort
+- Bubble Sort
 - Insertion Sort
-  
+- Merge Sort
+- Counting Sort
+
 ## Searching Algorithms
 
 - Binary Search
