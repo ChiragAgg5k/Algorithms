@@ -7,4 +7,4 @@ This repository contains the following algorithms implemented in Java.
 - Counting Sort
 - Insertion Sort
 - Merge Sort
-  
+- Bubble Sort
