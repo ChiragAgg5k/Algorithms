@@ -193,5 +193,5 @@ cython_debug/
 # Templates end here
 
 .idea
-Java/.idea
 *.iml
+out
