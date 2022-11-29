@@ -2,7 +2,7 @@
 
 This is a repository of algorithms implemented in various languages. The algorithms are organized by language and then the different types of algorithms are listed. The algorithms are implemented in a way that they can be easily understood and modified.
 
-## Refereces
+## References
 
 There are multiple references that I used to learn the algorithms. The following are the some of the references that I used:
 
