@@ -2,7 +2,7 @@ def counting_sort(arr):
 
     # creating a base list "count" containing 10 0's (0-9)
 
-    c = [0]*10
+    c = [0] * 10
 
     for i in range(len(arr)):
 
@@ -14,13 +14,13 @@ def counting_sort(arr):
 
         # no we are added the no. of counts at i with the one before it
 
-        c[i] += c[i-1]
+        c[i] += c[i - 1]
 
     # time to traverse the list in opposite direction
-    i = len(arr)-1
+    i = len(arr) - 1
 
     # creating another array which will store the result
-    res = [0]*len(arr)
+    res = [0] * len(arr)
 
     while i >= 0:
 
@@ -28,7 +28,7 @@ def counting_sort(arr):
         # check it's count with c[arr[i]-1] (-1 for decrement from position value to index value)
         # assign the value "arr[i]" to the index value we derived in res
 
-        res[c[arr[i]]-1] = arr[i]
+        res[c[arr[i]] - 1] = arr[i]
 
         # decrementing no. of counts
         c[arr[i]] -= 1
