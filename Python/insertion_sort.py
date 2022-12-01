@@ -13,21 +13,18 @@ def insertion_sort(arr: List[int]) -> None:
         None : inplace function
     """
 
-    for i in range(1, len(arr)):  # outer loop representing the pointer (i)
+    for i in range(1, len(arr)):
 
-        j = i  # seperate pointer to sort elements before (i)
+        j = i
 
-        while (
-            arr[j - 1] > arr[j] and j > 0
-        ):  # this runs untill all the elements before (i) are sorted
-
+        while arr[j - 1] > arr[j] and j > 0:
             arr[j - 1], arr[j] = arr[j], arr[j - 1]
             j -= 1
 
 
 if __name__ == "__main__":
     test_array = list(
-        map(int, input("Enter space seperated array to be sorted: ").split())
+        map(int, input("Enter space separated array to be sorted: ").split())
     )
-    insertion_sort(test_array)
+    insertion_sort(test_array)  # inplace sort
     print("Sorted array:", test_array)

@@ -4,7 +4,7 @@ from typing import List
 def merge_sort(arr: List[int]) -> None:
     """Merge Sort algorithm implementation in python
 
-    Time complexity : O(nLogn)
+    Time complexity : O(nLog(n))
     Space complexity : O(n)
 
     Args:
@@ -30,7 +30,7 @@ def merge_sort(arr: List[int]) -> None:
 
         while i < len(left_arr) and j < len(
             right_arr
-        ):  # when index for both halfs is lower than lenghts
+        ):  # when index for both halves is lower than lengths
 
             if left_arr[i] < right_arr[j]:  # comparing values
                 arr[k] = left_arr[i]
@@ -56,6 +56,7 @@ def merge_sort(arr: List[int]) -> None:
 
 
 if __name__ == "__main__":
+
     arr = list(map(int, input("Enter a space separated array to be sorted: ").split()))
     merge_sort(arr)  # inplace sort
     print("Sorted array: ", arr)

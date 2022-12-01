@@ -1,36 +1,33 @@
-def counting_sort(arr):
+from typing import List
 
-    # creating a base list "count" containing 10 0's (0-9)
+
+def counting_sort(arr: List[int]) -> List[int]:
+    """Counting Sort algorithm implementation in python
+
+    Time Complexity: O(log(n))
+    Space Complexity: O(log(n+k)) , where k is the range of elements
+
+    Args:
+        arr (List[int]): Array of elements to be sorted.\n
+        *Note* : The array must be have any number larger than 9
+
+    Returns:
+        List[int]: Sorted array
+    """
 
     c = [0] * 10
 
     for i in range(len(arr)):
-
-        # incrementing counts of each digit
-
         c[arr[i]] += 1
 
     for i in range(1, 10):
-
-        # no we are added the no. of counts at i with the one before it
-
         c[i] += c[i - 1]
 
-    # time to traverse the list in opposite direction
     i = len(arr) - 1
-
-    # creating another array which will store the result
     res = [0] * len(arr)
 
     while i >= 0:
-
-        # first we get the element we need to place with arr[i]
-        # check it's count with c[arr[i]-1] (-1 for decrement from position value to index value)
-        # assign the value "arr[i]" to the index value we derived in res
-
         res[c[arr[i]] - 1] = arr[i]
-
-        # decrementing no. of counts
         c[arr[i]] -= 1
         i -= 1
 
@@ -39,7 +36,5 @@ def counting_sort(arr):
 
 if __name__ == "__main__":
 
-    # Note : The range of numbers this program accepts is only 0-9
-
-    arr = list(map(int, input("Enter a list of integers to be sorted : ").split()))
-    print(counting_sort(arr))
+    arr = list(map(int, input("Enter space separated array to be sorted: ").split()))
+    print("Sorted array: ", counting_sort(arr))
