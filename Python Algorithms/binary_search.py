@@ -16,26 +16,29 @@ def binary_search(arr: List[int], target: int) -> int:
     """
 
     left = 0
-    r = len(arr) - 1
+    right = len(arr) - 1
 
-    while left <= r:
-        m = (left + r) // 2
-        if arr[m] > target:
-            r = m - 1
-        elif arr[m] < target:
-            left = m + 1
+    while left <= right:
+        mid = (left + right) // 2
+
+        if arr[mid] > target:
+            right = mid - 1
+
+        elif arr[mid] < target:
+            left = mid + 1
+
         else:
-            return m
+            return mid
+
     return -1
 
 
-if __name__ == "main":
+if __name__ == "__main__":
+
+    # Make sure the entered array is sorted.
     testArray = list(
         map(int, input("Enter space separated array of integers: ").split())
     )
-    target = int(input())
+    target = int(input("Enter target integer: "))
 
-    # binary search requires the array to be sorted
-    testArray.sort()
-
-    print(f"{binary_search(arr=testArray,target=target)}th index.")
+    print(f"Index = {binary_search(arr=testArray,target=target)}")
