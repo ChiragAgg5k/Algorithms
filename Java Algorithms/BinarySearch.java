@@ -2,13 +2,9 @@ public class BinarySearch {
 
   public static void main(String[] args) {
     int[] testArray = { 1, 2, 3, 4, 5 };
-    System.out.println(binary_search("Target is found at index: " + testArray, 3));
+    System.out.println("Target is found at index: "+binary_search(testArray, 3));
   }
 
-  /**
-   * Binary Search algorithm implementation in Java
-   *
-   */
   public static int binary_search(int[] arr, int target) {
 
     int left = 0;
