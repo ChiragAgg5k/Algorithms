@@ -1,9 +1,15 @@
 #include <iostream>
 using namespace std;
 
-/// @brief Bubble Sort Algorithm implementation in C++
-/// @param arr Array of integers to be sorted
-/// @param size Size of the array
+/**
+ * Bubble sort algorithm.
+ * Time complexity: O(n^2),
+ * Space complexity: O(1)
+ *
+ * @param arr[] array of integers to be sorted
+ * @param size size of array
+ * @return null, sorts array in place
+ */
 void bubbleSort(int arr[], int size)
 {
     while (true)

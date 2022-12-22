@@ -2,7 +2,7 @@
 using namespace std;
 
 /**
- * Binary search algorithm.
+ * @brief search algorithm.
  * Time complexity: O(log n),
  * Space complexity: O(1)
  *
