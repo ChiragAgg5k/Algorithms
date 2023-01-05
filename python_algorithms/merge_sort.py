@@ -23,10 +23,8 @@ def merge_sort(arr: List[int]) -> None:
         merge_sort(right_arr)
 
         # merge
-
-        i = 0  # left arr index
-        j = 0  # right arr index
-        k = 0  # merged arr index
+        
+        i = j = k = 0
 
         while i < len(left_arr) and j < len(
             right_arr

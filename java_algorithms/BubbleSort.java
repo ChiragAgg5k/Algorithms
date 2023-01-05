@@ -1,56 +1,43 @@
-import java.util.Scanner;
 import java.util.Arrays;
 
 public class BubbleSort {
 
-  public static final Scanner scan = new Scanner(System.in);
+    public static void main(String[] args) {
 
-  public static void main(String[] args) {
+        int[] testArray = {2, 45, 123, 5, 46, 2, 356, 7, 8, 3};
+        System.out.println("Before: " + Arrays.toString(testArray));
 
-    System.out.print("Enter size of the array: ");
-    int length = scan.nextInt();
-    System.out.println();
-
-    int[] testArray = new int[length];
-
-    for (int i = 0; i < length; i++) {
-      System.out.print("Enter element number " + (i + 1) + ": ");
-      testArray[i] = scan.nextInt();
+        bubbleSort(testArray);
+        System.out.println("After: " + Arrays.toString(testArray));
     }
 
-    bubbleSort(testArray);
 
-    System.out.println();
-    System.out.print("Sorted array: " + Arrays.toString(testArray));
+    /**
+     * Bubble Sort Algorithm implementation in Java.
+     */
+    public static void bubbleSort(int[] array) {
 
-  }
+        // infinite loop , similar to while(true)
+        for (; ; ) {
 
-  /**
-   * Bubble Sort Algorithm implementation in Java.
-   */
-  public static void bubbleSort(int[] array) {
+            boolean swapped = false;
 
-    // infinite loop , similar to while(true)
-    for (;;) {
+            for (int i = 0; i < (array.length - 1); i++) {
+                if (array[i] > array[i + 1]) {
 
-      boolean swapped = false;
+                    swapped = true;
 
-      for (int i = 0; i < (array.length - 1); i++) {
-        if (array[i] > array[i + 1]) {
+                    // traditional swap
+                    int temp = array[i];
+                    array[i] = array[i + 1];
+                    array[i + 1] = temp;
+                }
+            }
 
-          swapped = true;
-
-          // traditional swap
-          int temp = array[i];
-          array[i] = array[i + 1];
-          array[i + 1] = temp;
+            // if no swaps take place , our array has been sorted
+            if (!swapped) {
+                break;
+            }
         }
-      }
-
-      // if no swaps take place , our array has been sorted
-      if (!swapped) {
-        break;
-      }
     }
-  }
 }

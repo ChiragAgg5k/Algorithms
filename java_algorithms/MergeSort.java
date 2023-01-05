@@ -1,9 +1,9 @@
 import java.util.Arrays;
 
 public class MergeSort {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
 
-        int[] testArray = { 10, 2, 8, 3, 100, 53, 32, 57 };
+        int[] testArray = {10, 2, 8, 3, 100, 53, 32, 57};
         mergeSort(testArray);
         System.out.println(Arrays.toString(testArray));
 
@@ -23,13 +23,9 @@ public class MergeSort {
         int[] left = new int[mid];
         int[] right = new int[n - mid];
 
-        for (int i = 0; i < mid; i++) {
-            left[i] = arr[i];
-        }
-
-        for (int i = mid; i < n; i++) {
-            right[i - mid] = arr[i];
-        }
+        // creating left and right arrays
+        System.arraycopy(arr, 0, left, 0, mid);
+        if (n - mid >= 0) System.arraycopy(arr, mid, right, 0, n - mid);
 
         mergeSort(left, mid);
         mergeSort(right, n - mid);
